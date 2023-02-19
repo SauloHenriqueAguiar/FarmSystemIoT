@@ -6,7 +6,7 @@
 
 # Path: Procfile
 
-web: python3 run.py
+python3 run.py
 
 
 

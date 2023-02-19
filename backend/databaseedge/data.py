@@ -38,7 +38,7 @@ while True:
     now = datetime.now()
     dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
    
-    pHpred = pd.read_csv(r'C:\Users\saulo\FarmSystemIoT\backend\databaseedge\predicaopH.csv', header=None)
+    pHpred = pd.read_csv(r'C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\predicaopH.csv', header=None)
     pHpred = pHpred.tail(1)
     pHpred = pHpred.values[0][0]
    
@@ -64,7 +64,7 @@ while True:
     header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
     data = pd.read_csv('sensordatalist.csv', names=header_list)
     
-    database = r"C:\Users\saulo\FarmSystemIoT\backend\databaseedge\db\bancoedgeagro.db"
+    database = r"C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\db\bancoedgeagro.db"
     conn = sqlite3.connect(database)
     '''conn = mysql.connect(host='localhost',
                   database='sensordatalist',

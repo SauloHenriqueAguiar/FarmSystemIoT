@@ -44,7 +44,7 @@ def main():
     
     header_list = ['Time', 'Humidity', 'Temperature','pH']
 
-    df = pd.read_csv(r'C:\Users\saulo\FarmSystemIoT\backend\databaseedge\sensordatalist.csv', names=header_list)
+    df = pd.read_csv(r'C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\sensordatalist.csv', names=header_list)
 
     get_temp = df['Temperature'].tail(20)
     get_time = df['Time'].tail(20)
@@ -77,7 +77,7 @@ def main():
         
         predict = predictions[-1]
 
-        with open(r'C:\Users\saulo\FarmSystemIoT\backend\databaseedge\predicaopH.csv', 'a',
+        with open(r'C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\predicaopH.csv', 'a',
                   #name columns pH
                     newline='', 
                     # remove blank lines

@@ -4,9 +4,9 @@
 import os
 import sys
 import subprocess
-#from dash import Dash
+from dash import Dash
 
-#app = Dash(__name__)
+app = Dash(__name__)
 #server = app.server
 
 
@@ -35,6 +35,12 @@ if __name__ == "__main__":
    main()
    #app.run_server()
    #app.run_server(debug=True, use_reloader=False) # Turn off reloader if inside Jupyter
+   app = Dash(__name__)
+   server = app.server
+   app.run_server(debug=True, use_reloader=False) # Turn off reloader if inside Jupyter
+   
+
+   
 
    
 

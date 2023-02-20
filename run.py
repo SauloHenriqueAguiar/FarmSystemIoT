@@ -10,8 +10,7 @@ from dash import Dash
 from frontend.dashboard import server, app
 
 
-
-
+server = app.server
 
 
 

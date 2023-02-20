@@ -17,6 +17,8 @@ import pandas as pd
 
 app = dash.Dash(__name__)
 
+server = app.server
+
 header_list = ['Time', 'Humidity', 'Temperature','pH']
 
 df = pd.read_csv(r'C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\sensordatalist.csv', names=header_list)

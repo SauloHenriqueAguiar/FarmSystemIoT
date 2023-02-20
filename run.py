@@ -4,13 +4,13 @@
 import os
 import sys
 import subprocess
-from dash import Dash
+#from dash import Dash
 
 # script to import server and app of frontend\dashboard.py
-from frontend.dashboard import server, app
+#from frontend.dashboard import server, app
 
 
-server = app.server
+#server = app.server
 
 
 
@@ -35,7 +35,7 @@ def main():
 
 if __name__ == "__main__":
    main()
-   app.run_server(debug=True)
+   #app.run_server(debug=True)
    
    
 

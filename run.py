@@ -6,8 +6,11 @@ import sys
 import subprocess
 from dash import Dash
 
-app = Dash(__name__)
-#server = app.server
+# script to import server and app of frontend\dashboard.py
+from frontend.dashboard import server, app
+
+
+
 
 
 
@@ -33,13 +36,8 @@ def main():
 
 if __name__ == "__main__":
    main()
-   #app.run_server()
-   #app.run_server(debug=True, use_reloader=False) # Turn off reloader if inside Jupyter
-   app = Dash(__name__)
-   #server = app.server
-   #app.run_server(debug=True, use_reloader=False) # Turn off reloader if inside Jupyter
-
-
+   app.run_server(debug=True)
+   
    
 
    

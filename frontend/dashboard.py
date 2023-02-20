@@ -17,7 +17,8 @@ import pandas as pd
 
 app = dash.Dash(__name__)
 
-server = app.server
+server = app.server 
+
 
 header_list = ['Time', 'Humidity', 'Temperature','pH']
 

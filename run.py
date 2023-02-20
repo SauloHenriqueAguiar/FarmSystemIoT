@@ -6,8 +6,8 @@ import sys
 import subprocess
 from dash import Dash
 
-#app = Dash(__name__)
-#server = app.server
+app = Dash(__name__)
+server = app.server
 
 
 
@@ -33,7 +33,7 @@ def main():
 
 if __name__ == "__main__":
    main()
-   #app.run_server()
+   app.run_server()
    #app.run_server(debug=True, use_reloader=False) # Turn off reloader if inside Jupyter
 
    

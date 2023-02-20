@@ -36,9 +36,9 @@ if __name__ == "__main__":
    #app.run_server()
    #app.run_server(debug=True, use_reloader=False) # Turn off reloader if inside Jupyter
    app = Dash(__name__)
-   server = app.server
-   app.run_server(debug=True, use_reloader=False) # Turn off reloader if inside Jupyter
-   
+   #server = app.server
+   #app.run_server(debug=True, use_reloader=False) # Turn off reloader if inside Jupyter
+
 
    
 

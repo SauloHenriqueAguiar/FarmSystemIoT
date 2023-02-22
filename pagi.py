@@ -17,8 +17,7 @@ import pandas as pd
 
 app = dash.Dash(__name__)
 
-server = app.server 
-
+#server = app.server 
 
 header_list = ['Time', 'Humidity', 'Temperature','pH']
 
@@ -343,4 +342,4 @@ def update_humi(n):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run(debug=True)

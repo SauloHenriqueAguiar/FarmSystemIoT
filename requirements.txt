@@ -59,4 +59,4 @@ tensorflow-estimator==2.11.0
 
 tensorflow-io-gcs-filesystem==0.27.0
 
-gunicorn==20.1.0
+gunicorn

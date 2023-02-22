@@ -1,4 +1,11 @@
 
+web: gunicorn run:app
+
+
+
+
+
+
 
 
 

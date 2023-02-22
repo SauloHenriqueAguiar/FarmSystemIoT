@@ -12,17 +12,17 @@ def main():
 
 
     # script to execute files frontend\dashfuncionando.py
-    #os.chdir('C:\\Users\\saulo\\FARMSYSTEMIOTDL\\frontend')
-    #subprocess.Popen(["python", "dashboard.py"])
+    os.chdir("./frontend")
+    subprocess.Popen(["python", "dashboard.py"])
     
     # script to execute subpross files backend\databaseedge\data.py at the same time
-    os.chdir('C:\\Users\\saulo\\FARMSYSTEMIOTDL\\backend\\databaseedge')
+    os.chdir("../backend/databaseedge")
     subprocess.Popen(["python", "data.py"])
     # script to execute files backend\forecastdeeplearningLSTM\previsao.py
-    os.chdir('C:\\Users\\saulo\\FARMSYSTEMIOTDL\\backend\\forecastdeeplearningLSTM')
+    os.chdir("../forecastdeeplearningLSTM")
     subprocess.Popen(["python", "previsao.py"])
    # script to execute files backend\databasecloud\datacloud.py
-    os.chdir('C:\\Users\\saulo\\FARMSYSTEMIOTDL\\backend\\databasecloud')
+    os.chdir("../databasecloud")
     subprocess.Popen(["python", "datacloud.py"])
     
 

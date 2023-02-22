@@ -19,9 +19,11 @@ app = dash.Dash(__name__)
 
 #server = app.server 
 
-header_list = ['Time', 'Humidity', 'Temperature','pH']
+header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
 
-df = pd.read_csv(r'C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\sensordatalist.csv', names=header_list)
+#script to read list backend\databaseedge\sensordatalist.csv
+
+df = pd.read_csv(r'backend\databaseedge\sensordatalist.csv', names=header_list)
 
 get_temp = df['Temperature'].tail(20)
 get_time = df['Time'].tail(20)
@@ -45,8 +47,9 @@ app.layout = html.Div(
 
 
 
+       
 
-        
+       '''
         html.Div(
             [
                 html.Img(src=app.get_asset_url('sun.png'), style={
@@ -54,8 +57,8 @@ app.layout = html.Div(
                     "margin-left": "10px",
                     "padding-top": "10px",
                 }),
-
-
+           ''' 
+            '''
                 html.Div(
                     [
                         html.H1(
@@ -74,8 +77,8 @@ app.layout = html.Div(
                 "height": "70px",
             },
         ),
-        
-   
+        '''
+    ,
           html.Div([
               html.Div([
             html.Div([
@@ -128,7 +131,7 @@ app.layout = html.Div(
 )
 def update_graph_scatter(n):
     header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
-    df = pd.read_csv(r'C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\sensordatalist.csv', names=header_list)
+    df = pd.read_csv(r'backend\databaseedge\sensordatalist.csv', names=header_list)
 
     get_temp = df['Temperature'].tail(20)
     get_time = df['Time'].tail(20)
@@ -203,7 +206,7 @@ def update_graph_scatter(n):
 )
 def update_temp(n):
     header_list = ['Time', 'Humidity', 'Temperature','pH']
-    df = pd.read_csv(r'C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\sensordatalist.csv', names=header_list)
+    df = pd.read_csv(r'backend\databaseedge\sensordatalist.csv', names=header_list)
 
     get_temp = df['Temperature'].tail(20)
     get_time = df['Time'].tail(20)
@@ -212,6 +215,7 @@ def update_temp(n):
     temp = get_temp.iloc[-1]
     return [
         html.Div([
+        '''
             html.Img(src=app.get_asset_url('hot.png'),
                      style={'height': '50px',
                             'width': '50px',
@@ -220,6 +224,8 @@ def update_temp(n):
                             "margin-left": "400px",
                             "padding-top": "10px",
                              }),
+                             '''
+                             ,
             html.Div([
                 
                 html.Div('°C', className='symbol',
@@ -273,7 +279,7 @@ def update_temp(n):
 )
 def update_humi(n):
     header_list=['Time', 'Humidity', 'Temperature','pH']
-    df = pd.read_csv(r'C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\sensordatalist.csv', names=header_list)
+    df = pd.read_csv(r'backend\databaseedge\sensordatalist.csv', names=header_list)
 
     get_temp=df['Temperature'].tail(20)
     get_time=df['Time'].tail(20)
@@ -283,6 +289,7 @@ def update_humi(n):
     hum = get_humi.iloc[-1]
     return [
         html.Div([
+        '''
             html.Img(src=app.get_asset_url('humidity.png'),
                       style={'height': '50px',
                             'width': '50px',
@@ -292,6 +299,8 @@ def update_humi(n):
                             "padding-top": "10px",
                             'top': '70px'
                              }),
+                             '''
+                             ,
             html.Div([
                 html.Div('%', className='symbol',
                 style={'height': '50px',

@@ -23,7 +23,8 @@ header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
 
 #script to read list backend\databaseedge\sensordatalist.csv
 
-df = pd.read_csv(r'backend\databaseedge\sensordatalist.csv', names=header_list)
+df = pd.read_csv('backend\databaseedge\sensordatalist.csv', names=header_list)
+
 
 get_temp = df['Temperature'].tail(20)
 get_time = df['Time'].tail(20)
@@ -131,7 +132,7 @@ app.layout = html.Div(
 )
 def update_graph_scatter(n):
     header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
-    df = pd.read_csv(r'backend\databaseedge\sensordatalist.csv', names=header_list)
+    df = pd.read_csv('backend\databaseedge\sensordatalist.csv', names=header_list)
 
     get_temp = df['Temperature'].tail(20)
     get_time = df['Time'].tail(20)
@@ -206,7 +207,7 @@ def update_graph_scatter(n):
 )
 def update_temp(n):
     header_list = ['Time', 'Humidity', 'Temperature','pH']
-    df = pd.read_csv(r'backend\databaseedge\sensordatalist.csv', names=header_list)
+    df = pd.read_csv('backend\databaseedge\sensordatalist.csv', names=header_list)
 
     get_temp = df['Temperature'].tail(20)
     get_time = df['Time'].tail(20)
@@ -279,7 +280,7 @@ def update_temp(n):
 )
 def update_humi(n):
     header_list=['Time', 'Humidity', 'Temperature','pH']
-    df = pd.read_csv(r'backend\databaseedge\sensordatalist.csv', names=header_list)
+    df = pd.read_csv('backend\databaseedge\sensordatalist.csv', names=header_list)
 
     get_temp=df['Temperature'].tail(20)
     get_time=df['Time'].tail(20)

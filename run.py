@@ -4,12 +4,7 @@
 import os
 import sys
 import subprocess
-import dash 
-import dash_core_components as dcc
-import dash_html_components as html
-import plotly
 
-app = dash.Dash(__name__)
 
 def main():
     
@@ -32,7 +27,7 @@ def main():
 
 if __name__ == "__main__":
    main()
-   app.run_server(debug=False)
+   
    
    
    

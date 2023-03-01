@@ -11,7 +11,7 @@ def main():
 
 
     # script to execute files frontend\dashfuncionando.py
-    os.chdir("../frontend")
+    os.chdir("./frontend")
     subprocess.Popen(["python", "dashboard.py"])
     
     # script to execute subpross files backend\databaseedge\data.py at the same time

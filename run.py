@@ -4,7 +4,7 @@
 import os
 import sys
 import subprocess
-
+import time
 
 def main():
     
@@ -27,6 +27,7 @@ def main():
 
 if __name__ == "__main__":
    main()
+   time.sleep(10)
    
    
    

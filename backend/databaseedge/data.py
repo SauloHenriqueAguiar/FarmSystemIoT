@@ -16,7 +16,7 @@ from datetime import datetime
 
 
 PORT = 'COM4'
-ser = serial.Serial('COM4', 9600, timeout=2)
+ser = serial.Serial('COM4', 115200, timeout=2)
 
 humArray = []
 tempArray = []

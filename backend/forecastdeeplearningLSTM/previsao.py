@@ -40,9 +40,9 @@ def main():
     predictions_data = []
     live_data = np.arange(seq_len[0]-1) 
     
-    #script get pH data from backend\database edge\sensor dataset.csv
     
-    header_list = ['Time', 'Humidity', 'Temperature','pH']
+    
+    header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
 
     df = pd.read_csv(r'C:\Users\saulo\FARMSYSTEMIOTDL\backend\databaseedge\sensordatalist.csv', names=header_list)
 
@@ -54,7 +54,7 @@ def main():
     sensor_port = get_pH
 
 
-    plt.ion() #Gráfico em tempo real
+    plt.ion() 
 
     while True:
         i=0

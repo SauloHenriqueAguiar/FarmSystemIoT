@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 
 import os
 import json
@@ -42,9 +42,9 @@ def main():
     
     #script get pH data from backend\database edge\sensor dataset.csv
     
-    header_list = ['Time', 'Humidity', 'Temperature','pH']
+    header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
 
-    df = pd.read_csv(r'/home/shna/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
+    df = pd.read_csv(r'/home/saulo/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
 
     get_temp = df['Temperature'].tail(20)
     get_time = df['Time'].tail(20)
@@ -77,7 +77,7 @@ def main():
         
         predict = predictions[-1]
 
-        with open(r'/home/shna/FarmSystemIoTDL/backend/databaseedge/predicaopH.csv', 'a',
+        with open(r'/home/saulo/FarmSystemIoTDL/backend/databaseedge/predicaopH.csv', 'a',
                   #name columns pH
                     newline='', 
                     # remove blank lines
@@ -107,7 +107,7 @@ def main():
 
         
         if len(sensor_data) >10 * seq_len[0]:
-            np.savetxt('data\sensor.csv', sensor_data, delimiter = ',', header='sensor_value')
+            np.savetxt('/home/saulo/FarmSystemIoTDL/backend/forecastdeeplearningLSTM/data/sensor.csv', sensor_data, delimiter = ',', header='sensor_value')
 
         #carregar dados para treinamento
             data = DataLoader(

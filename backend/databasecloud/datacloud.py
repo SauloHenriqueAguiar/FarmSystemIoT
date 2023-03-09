@@ -7,11 +7,11 @@ import datetime
 import os
 
 
-firebase = firebase.FirebaseApplication('https://testeraspgrat-default-rtdb.firebaseio.com', None)
+firebase = firebase.FirebaseApplication('https://bancotestelstm-default-rtdb.firebaseio.com/', None)
 
 def update_firebase():
     header_list = ['Time', 'Humidity', 'Temperature', 'pH', 'pHpred']
-    df = pd.read_csv(r'/home/shna/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
+    df = pd.read_csv(r'/home/saulo/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
 
     get_temp = df['Temperature'].tail(1)
     get_time = df['Time'].tail(1)

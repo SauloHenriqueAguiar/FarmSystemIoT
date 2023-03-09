@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 
 import dash
 from dash.dependencies import Output, Input
@@ -19,9 +19,9 @@ app = dash.Dash(__name__)
 
 #server = app.server 
 
-header_list = ['Time', 'Humidity', 'Temperature','pH']
+header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
 
-df = pd.read_csv(r'/home/shna/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
+df = pd.read_csv(r'/home/saulo/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
 
 get_temp = df['Temperature'].tail(20)
 get_time = df['Time'].tail(20)
@@ -128,7 +128,7 @@ app.layout = html.Div(
 )
 def update_graph_scatter(n):
     header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
-    df = pd.read_csv(r'/home/shna/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
+    df = pd.read_csv(r'/home/saulo/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
 
     get_temp = df['Temperature'].tail(20)
     get_time = df['Time'].tail(20)
@@ -202,8 +202,8 @@ def update_graph_scatter(n):
     [Input('graph-update', 'n_intervals')]
 )
 def update_temp(n):
-    header_list = ['Time', 'Humidity', 'Temperature','pH']
-    df = pd.read_csv(r'/home/shna/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
+    header_list = ['Time', 'Humidity', 'Temperature','pH','pHpred']
+    df = pd.read_csv(r'/home/saulo/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
 
     get_temp = df['Temperature'].tail(20)
     get_time = df['Time'].tail(20)
@@ -272,8 +272,8 @@ def update_temp(n):
     [Input('graph-update', 'n_intervals')]
 )
 def update_humi(n):
-    header_list=['Time', 'Humidity', 'Temperature','pH']
-    df = pd.read_csv(r'/home/shna/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
+    header_list=['Time', 'Humidity', 'Temperature','pH','pHpred']
+    df = pd.read_csv(r'/home/saulo/FarmSystemIoTDL/backend/databaseedge/sensordatalist.csv', names=header_list)
 
     get_temp=df['Temperature'].tail(20)
     get_time=df['Time'].tail(20)
